@@ -1,0 +1,228 @@
+{
+  "status": 500,
+  "error": "Internal Server Error",
+  "exception": "#\u003cActiveRecord::PendingMigrationError: \n\nMigrations are pending. To resolve this issue, run:\n\n        bin/rails db:migrate RAILS_ENV=development\n\n\u003e",
+  "traces": {
+    "Application Trace": [],
+    "Framework Trace": [
+      {
+        "id": 0,
+        "trace": "activerecord (5.1.5) lib/active_record/migration.rb:576:in `check_pending!'"
+      },
+      {
+        "id": 1,
+        "trace": "activerecord (5.1.5) lib/active_record/migration.rb:553:in `call'"
+      },
+      {
+        "id": 2,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'"
+      },
+      {
+        "id": 3,
+        "trace": "activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'"
+      },
+      {
+        "id": 4,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'"
+      },
+      {
+        "id": 5,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'"
+      },
+      {
+        "id": 6,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'"
+      },
+      {
+        "id": 7,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'"
+      },
+      {
+        "id": 8,
+        "trace": "railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'"
+      },
+      {
+        "id": 9,
+        "trace": "railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'"
+      },
+      {
+        "id": 10,
+        "trace": "activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'"
+      },
+      {
+        "id": 11,
+        "trace": "activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'"
+      },
+      {
+        "id": 12,
+        "trace": "activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'"
+      },
+      {
+        "id": 13,
+        "trace": "railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'"
+      },
+      {
+        "id": 14,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'"
+      },
+      {
+        "id": 15,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'"
+      },
+      {
+        "id": 16,
+        "trace": "rack (2.0.4) lib/rack/runtime.rb:22:in `call'"
+      },
+      {
+        "id": 17,
+        "trace": "activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'"
+      },
+      {
+        "id": 18,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'"
+      },
+      {
+        "id": 19,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'"
+      },
+      {
+        "id": 20,
+        "trace": "rack (2.0.4) lib/rack/sendfile.rb:111:in `call'"
+      },
+      {
+        "id": 21,
+        "trace": "railties (5.1.5) lib/rails/engine.rb:522:in `call'"
+      },
+      {
+        "id": 22,
+        "trace": "puma (3.11.2) lib/puma/configuration.rb:225:in `call'"
+      },
+      {
+        "id": 23,
+        "trace": "puma (3.11.2) lib/puma/server.rb:624:in `handle_request'"
+      },
+      {
+        "id": 24,
+        "trace": "puma (3.11.2) lib/puma/server.rb:438:in `process_client'"
+      },
+      {
+        "id": 25,
+        "trace": "puma (3.11.2) lib/puma/server.rb:302:in `block in run'"
+      },
+      {
+        "id": 26,
+        "trace": "puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'"
+      }
+    ],
+    "Full Trace": [
+      {
+        "id": 0,
+        "trace": "activerecord (5.1.5) lib/active_record/migration.rb:576:in `check_pending!'"
+      },
+      {
+        "id": 1,
+        "trace": "activerecord (5.1.5) lib/active_record/migration.rb:553:in `call'"
+      },
+      {
+        "id": 2,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'"
+      },
+      {
+        "id": 3,
+        "trace": "activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'"
+      },
+      {
+        "id": 4,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'"
+      },
+      {
+        "id": 5,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'"
+      },
+      {
+        "id": 6,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'"
+      },
+      {
+        "id": 7,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'"
+      },
+      {
+        "id": 8,
+        "trace": "railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'"
+      },
+      {
+        "id": 9,
+        "trace": "railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'"
+      },
+      {
+        "id": 10,
+        "trace": "activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'"
+      },
+      {
+        "id": 11,
+        "trace": "activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'"
+      },
+      {
+        "id": 12,
+        "trace": "activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'"
+      },
+      {
+        "id": 13,
+        "trace": "railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'"
+      },
+      {
+        "id": 14,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'"
+      },
+      {
+        "id": 15,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'"
+      },
+      {
+        "id": 16,
+        "trace": "rack (2.0.4) lib/rack/runtime.rb:22:in `call'"
+      },
+      {
+        "id": 17,
+        "trace": "activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'"
+      },
+      {
+        "id": 18,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'"
+      },
+      {
+        "id": 19,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'"
+      },
+      {
+        "id": 20,
+        "trace": "rack (2.0.4) lib/rack/sendfile.rb:111:in `call'"
+      },
+      {
+        "id": 21,
+        "trace": "railties (5.1.5) lib/rails/engine.rb:522:in `call'"
+      },
+      {
+        "id": 22,
+        "trace": "puma (3.11.2) lib/puma/configuration.rb:225:in `call'"
+      },
+      {
+        "id": 23,
+        "trace": "puma (3.11.2) lib/puma/server.rb:624:in `handle_request'"
+      },
+      {
+        "id": 24,
+        "trace": "puma (3.11.2) lib/puma/server.rb:438:in `process_client'"
+      },
+      {
+        "id": 25,
+        "trace": "puma (3.11.2) lib/puma/server.rb:302:in `block in run'"
+      },
+      {
+        "id": 26,
+        "trace": "puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'"
+      }
+    ]
+  }
+}
