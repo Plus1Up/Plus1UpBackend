@@ -1,0 +1,13 @@
+{
+  "status": "SUCCESS",
+  "message": "Saved coach",
+  "data": {
+    "id": 6,
+    "mailAddress": "TestTitle",
+    "password": "123456",
+    "name": "TestName",
+    "lastname": "TestLastName",
+    "created_at": "2018-03-06T19:20:56.197Z",
+    "updated_at": "2018-03-06T19:20:56.197Z"
+  }
+}

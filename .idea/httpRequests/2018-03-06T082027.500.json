@@ -1,0 +1,477 @@
+{
+  "status": 500,
+  "error": "Internal Server Error",
+  "exception": "#\u003cActiveModel::ForbiddenAttributesError: ActiveModel::ForbiddenAttributesError\u003e",
+  "traces": {
+    "Application Trace": [
+      {
+        "id": 5,
+        "trace": "app/controllers/api/coaches_controller.rb:13:in `create'"
+      }
+    ],
+    "Framework Trace": [
+      {
+        "id": 0,
+        "trace": "activemodel (5.1.5) lib/active_model/forbidden_attributes_protection.rb:21:in `sanitize_for_mass_assignment'"
+      },
+      {
+        "id": 1,
+        "trace": "activemodel (5.1.5) lib/active_model/attribute_assignment.rb:33:in `assign_attributes'"
+      },
+      {
+        "id": 2,
+        "trace": "activerecord (5.1.5) lib/active_record/core.rb:337:in `initialize'"
+      },
+      {
+        "id": 3,
+        "trace": "activerecord (5.1.5) lib/active_record/inheritance.rb:66:in `new'"
+      },
+      {
+        "id": 4,
+        "trace": "activerecord (5.1.5) lib/active_record/inheritance.rb:66:in `new'"
+      },
+      {
+        "id": 6,
+        "trace": "actionpack (5.1.5) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'"
+      },
+      {
+        "id": 7,
+        "trace": "actionpack (5.1.5) lib/abstract_controller/base.rb:186:in `process_action'"
+      },
+      {
+        "id": 8,
+        "trace": "actionpack (5.1.5) lib/action_controller/metal/rendering.rb:30:in `process_action'"
+      },
+      {
+        "id": 9,
+        "trace": "actionpack (5.1.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'"
+      },
+      {
+        "id": 10,
+        "trace": "activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'"
+      },
+      {
+        "id": 11,
+        "trace": "actionpack (5.1.5) lib/abstract_controller/callbacks.rb:19:in `process_action'"
+      },
+      {
+        "id": 12,
+        "trace": "actionpack (5.1.5) lib/action_controller/metal/rescue.rb:20:in `process_action'"
+      },
+      {
+        "id": 13,
+        "trace": "actionpack (5.1.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'"
+      },
+      {
+        "id": 14,
+        "trace": "activesupport (5.1.5) lib/active_support/notifications.rb:166:in `block in instrument'"
+      },
+      {
+        "id": 15,
+        "trace": "activesupport (5.1.5) lib/active_support/notifications/instrumenter.rb:21:in `instrument'"
+      },
+      {
+        "id": 16,
+        "trace": "activesupport (5.1.5) lib/active_support/notifications.rb:166:in `instrument'"
+      },
+      {
+        "id": 17,
+        "trace": "actionpack (5.1.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'"
+      },
+      {
+        "id": 18,
+        "trace": "actionpack (5.1.5) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'"
+      },
+      {
+        "id": 19,
+        "trace": "activerecord (5.1.5) lib/active_record/railties/controller_runtime.rb:22:in `process_action'"
+      },
+      {
+        "id": 20,
+        "trace": "actionpack (5.1.5) lib/abstract_controller/base.rb:124:in `process'"
+      },
+      {
+        "id": 21,
+        "trace": "actionpack (5.1.5) lib/action_controller/metal.rb:189:in `dispatch'"
+      },
+      {
+        "id": 22,
+        "trace": "actionpack (5.1.5) lib/action_controller/metal.rb:253:in `dispatch'"
+      },
+      {
+        "id": 23,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'"
+      },
+      {
+        "id": 24,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:31:in `serve'"
+      },
+      {
+        "id": 25,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'"
+      },
+      {
+        "id": 26,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/journey/router.rb:33:in `each'"
+      },
+      {
+        "id": 27,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/journey/router.rb:33:in `serve'"
+      },
+      {
+        "id": 28,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:844:in `call'"
+      },
+      {
+        "id": 29,
+        "trace": "rack (2.0.4) lib/rack/etag.rb:25:in `call'"
+      },
+      {
+        "id": 30,
+        "trace": "rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'"
+      },
+      {
+        "id": 31,
+        "trace": "rack (2.0.4) lib/rack/head.rb:12:in `call'"
+      },
+      {
+        "id": 32,
+        "trace": "activerecord (5.1.5) lib/active_record/migration.rb:556:in `call'"
+      },
+      {
+        "id": 33,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'"
+      },
+      {
+        "id": 34,
+        "trace": "activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'"
+      },
+      {
+        "id": 35,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'"
+      },
+      {
+        "id": 36,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'"
+      },
+      {
+        "id": 37,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'"
+      },
+      {
+        "id": 38,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'"
+      },
+      {
+        "id": 39,
+        "trace": "railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'"
+      },
+      {
+        "id": 40,
+        "trace": "railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'"
+      },
+      {
+        "id": 41,
+        "trace": "activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'"
+      },
+      {
+        "id": 42,
+        "trace": "activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'"
+      },
+      {
+        "id": 43,
+        "trace": "activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'"
+      },
+      {
+        "id": 44,
+        "trace": "railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'"
+      },
+      {
+        "id": 45,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'"
+      },
+      {
+        "id": 46,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'"
+      },
+      {
+        "id": 47,
+        "trace": "rack (2.0.4) lib/rack/runtime.rb:22:in `call'"
+      },
+      {
+        "id": 48,
+        "trace": "activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'"
+      },
+      {
+        "id": 49,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'"
+      },
+      {
+        "id": 50,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'"
+      },
+      {
+        "id": 51,
+        "trace": "rack (2.0.4) lib/rack/sendfile.rb:111:in `call'"
+      },
+      {
+        "id": 52,
+        "trace": "railties (5.1.5) lib/rails/engine.rb:522:in `call'"
+      },
+      {
+        "id": 53,
+        "trace": "puma (3.11.2) lib/puma/configuration.rb:225:in `call'"
+      },
+      {
+        "id": 54,
+        "trace": "puma (3.11.2) lib/puma/server.rb:624:in `handle_request'"
+      },
+      {
+        "id": 55,
+        "trace": "puma (3.11.2) lib/puma/server.rb:438:in `process_client'"
+      },
+      {
+        "id": 56,
+        "trace": "puma (3.11.2) lib/puma/server.rb:302:in `block in run'"
+      },
+      {
+        "id": 57,
+        "trace": "puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'"
+      }
+    ],
+    "Full Trace": [
+      {
+        "id": 0,
+        "trace": "activemodel (5.1.5) lib/active_model/forbidden_attributes_protection.rb:21:in `sanitize_for_mass_assignment'"
+      },
+      {
+        "id": 1,
+        "trace": "activemodel (5.1.5) lib/active_model/attribute_assignment.rb:33:in `assign_attributes'"
+      },
+      {
+        "id": 2,
+        "trace": "activerecord (5.1.5) lib/active_record/core.rb:337:in `initialize'"
+      },
+      {
+        "id": 3,
+        "trace": "activerecord (5.1.5) lib/active_record/inheritance.rb:66:in `new'"
+      },
+      {
+        "id": 4,
+        "trace": "activerecord (5.1.5) lib/active_record/inheritance.rb:66:in `new'"
+      },
+      {
+        "id": 5,
+        "trace": "app/controllers/api/coaches_controller.rb:13:in `create'"
+      },
+      {
+        "id": 6,
+        "trace": "actionpack (5.1.5) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'"
+      },
+      {
+        "id": 7,
+        "trace": "actionpack (5.1.5) lib/abstract_controller/base.rb:186:in `process_action'"
+      },
+      {
+        "id": 8,
+        "trace": "actionpack (5.1.5) lib/action_controller/metal/rendering.rb:30:in `process_action'"
+      },
+      {
+        "id": 9,
+        "trace": "actionpack (5.1.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'"
+      },
+      {
+        "id": 10,
+        "trace": "activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'"
+      },
+      {
+        "id": 11,
+        "trace": "actionpack (5.1.5) lib/abstract_controller/callbacks.rb:19:in `process_action'"
+      },
+      {
+        "id": 12,
+        "trace": "actionpack (5.1.5) lib/action_controller/metal/rescue.rb:20:in `process_action'"
+      },
+      {
+        "id": 13,
+        "trace": "actionpack (5.1.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'"
+      },
+      {
+        "id": 14,
+        "trace": "activesupport (5.1.5) lib/active_support/notifications.rb:166:in `block in instrument'"
+      },
+      {
+        "id": 15,
+        "trace": "activesupport (5.1.5) lib/active_support/notifications/instrumenter.rb:21:in `instrument'"
+      },
+      {
+        "id": 16,
+        "trace": "activesupport (5.1.5) lib/active_support/notifications.rb:166:in `instrument'"
+      },
+      {
+        "id": 17,
+        "trace": "actionpack (5.1.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'"
+      },
+      {
+        "id": 18,
+        "trace": "actionpack (5.1.5) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'"
+      },
+      {
+        "id": 19,
+        "trace": "activerecord (5.1.5) lib/active_record/railties/controller_runtime.rb:22:in `process_action'"
+      },
+      {
+        "id": 20,
+        "trace": "actionpack (5.1.5) lib/abstract_controller/base.rb:124:in `process'"
+      },
+      {
+        "id": 21,
+        "trace": "actionpack (5.1.5) lib/action_controller/metal.rb:189:in `dispatch'"
+      },
+      {
+        "id": 22,
+        "trace": "actionpack (5.1.5) lib/action_controller/metal.rb:253:in `dispatch'"
+      },
+      {
+        "id": 23,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'"
+      },
+      {
+        "id": 24,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:31:in `serve'"
+      },
+      {
+        "id": 25,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'"
+      },
+      {
+        "id": 26,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/journey/router.rb:33:in `each'"
+      },
+      {
+        "id": 27,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/journey/router.rb:33:in `serve'"
+      },
+      {
+        "id": 28,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:844:in `call'"
+      },
+      {
+        "id": 29,
+        "trace": "rack (2.0.4) lib/rack/etag.rb:25:in `call'"
+      },
+      {
+        "id": 30,
+        "trace": "rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'"
+      },
+      {
+        "id": 31,
+        "trace": "rack (2.0.4) lib/rack/head.rb:12:in `call'"
+      },
+      {
+        "id": 32,
+        "trace": "activerecord (5.1.5) lib/active_record/migration.rb:556:in `call'"
+      },
+      {
+        "id": 33,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'"
+      },
+      {
+        "id": 34,
+        "trace": "activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'"
+      },
+      {
+        "id": 35,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'"
+      },
+      {
+        "id": 36,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'"
+      },
+      {
+        "id": 37,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'"
+      },
+      {
+        "id": 38,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'"
+      },
+      {
+        "id": 39,
+        "trace": "railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'"
+      },
+      {
+        "id": 40,
+        "trace": "railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'"
+      },
+      {
+        "id": 41,
+        "trace": "activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'"
+      },
+      {
+        "id": 42,
+        "trace": "activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'"
+      },
+      {
+        "id": 43,
+        "trace": "activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'"
+      },
+      {
+        "id": 44,
+        "trace": "railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'"
+      },
+      {
+        "id": 45,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'"
+      },
+      {
+        "id": 46,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'"
+      },
+      {
+        "id": 47,
+        "trace": "rack (2.0.4) lib/rack/runtime.rb:22:in `call'"
+      },
+      {
+        "id": 48,
+        "trace": "activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'"
+      },
+      {
+        "id": 49,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'"
+      },
+      {
+        "id": 50,
+        "trace": "actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'"
+      },
+      {
+        "id": 51,
+        "trace": "rack (2.0.4) lib/rack/sendfile.rb:111:in `call'"
+      },
+      {
+        "id": 52,
+        "trace": "railties (5.1.5) lib/rails/engine.rb:522:in `call'"
+      },
+      {
+        "id": 53,
+        "trace": "puma (3.11.2) lib/puma/configuration.rb:225:in `call'"
+      },
+      {
+        "id": 54,
+        "trace": "puma (3.11.2) lib/puma/server.rb:624:in `handle_request'"
+      },
+      {
+        "id": 55,
+        "trace": "puma (3.11.2) lib/puma/server.rb:438:in `process_client'"
+      },
+      {
+        "id": 56,
+        "trace": "puma (3.11.2) lib/puma/server.rb:302:in `block in run'"
+      },
+      {
+        "id": 57,
+        "trace": "puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'"
+      }
+    ]
+  }
+}

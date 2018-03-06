@@ -1,0 +1,9 @@
+{
+  "status": "ERROR",
+  "message": "Coach not saved",
+  "data": {
+    "mailAddress": [
+      "has already been taken"
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "status": "SUCCESS",
+  "message": "Loaded coaches",
+  "data": [
+    {
+      "id": 5,
+      "mailAddress": "shanelle@hodkiewicz.co",
+      "password": "Te2",
+      "name": "Madelynn",
+      "lastname": "Graham",
+      "created_at": "2018-03-06T17:13:19.053Z",
+      "updated_at": "2018-03-06T17:13:19.053Z"
+    },
+    {
+      "id": 4,
+      "mailAddress": "vena@casper.com",
+      "password": "Ff2fT",
+      "name": "Alfonso",
+      "lastname": "Schumm",
+      "created_at": "2018-03-06T17:13:19.049Z",
+      "updated_at": "2018-03-06T17:13:19.049Z"
+    },
+    {
+      "id": 3,
+      "mailAddress": "bernadine@gulgowskiadams.io",
+      "password": "C38",
+      "name": "Lawrence",
+      "lastname": "Fadel",
+      "created_at": "2018-03-06T17:13:19.044Z",
+      "updated_at": "2018-03-06T17:13:19.044Z"
+    },
+    {
+      "id": 2,
+      "mailAddress": "trea_heel@smitham.org",
+      "password": "IzVf",
+      "name": "Charley",
+      "lastname": "Kuhlman",
+      "created_at": "2018-03-06T17:13:19.039Z",
+      "updated_at": "2018-03-06T17:13:19.039Z"
+    },
+    {
+      "id": 1,
+      "mailAddress": "greta@wolff.name",
+      "password": "1kZ5",
+      "name": "Madyson",
+      "lastname": "Bauch",
+      "created_at": "2018-03-06T17:13:19.033Z",
+      "updated_at": "2018-03-06T17:13:19.033Z"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+POST http://localhost:3000/api/coaches
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "mailAddress": "TestTitle",   "name": "TestName",   "lastname": "TestLastName",   "password": "123456" }
+
+<> 2018-03-06T082109.422.json
+
+###
+
+POST http://localhost:3000/api/coaches
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "mailAddress": "TestTitle",   "name": "TestName",   "lastname": "TestLastName",   "password": "123456" }
+
+<> 2018-03-06T082056.200.json
+
+###
+
+POST http://localhost:3000/api/coaches
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "mailAddress": "TestTitle",   "name": "TestName",   "lastname": "TestLastName",   "password": "123456" }
+
+<> 2018-03-06T082027.500.json
+
+###
+
+POST http://localhost:3000/api/coaches
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "mailAddress": "TestTitle",   "name": "TestName",   "lastname": "TestLastName",   "password": "123456" }
+
+<> 2018-03-06T081831.500.json
+
+###
+
+POST http://localhost:3000/api/coaches?mailAddress=test@test.com&name=TestName&lastname=TestLastName&password=123456
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-03-06T081642.400.json
+
+###
+
+POST http://localhost:3000/api/coaches/3?mailAddress=test@test.com&name=TestName&lastname=TestLastName&password=123456
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+GET http://localhost:3000/api/coaches/3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-06T080414.200.json
+
+###
+
+GET http://localhost:3000/api/coaches/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-06T080354.200.json
+
+###
+
+GET http://localhost:3000/api/coaches/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-06T080206.200.json
+
+###
+
+GET http://localhost:3000/api/coaches
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-06T075243.200.json
+
+###
+
+GET http://localhost:3000/api/v1/coaches
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-06T062313.404.json
+
+###
+
