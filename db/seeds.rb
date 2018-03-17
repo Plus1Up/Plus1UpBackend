@@ -26,3 +26,11 @@ end
                     is_active: Faker::Boolean.boolean
                 })
 end
+
+(1..10).each {|i|
+  DietPlan.create({
+                      client: Client.find(i),
+                      name: Faker::Science.scientist,
+                      file_path: Faker::File.file_name,
+                  })
+}

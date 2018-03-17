@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180317171135) do
+ActiveRecord::Schema.define(version: 20180317191013) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,5 +38,15 @@ ActiveRecord::Schema.define(version: 20180317171135) do
     t.index ["mail_address"], name: "index_coaches_on_mail_address", unique: true
   end
 
+  create_table "diet_plans", force: :cascade do |t|
+    t.bigint "client_id"
+    t.string "name"
+    t.string "file_path"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["client_id"], name: "index_diet_plans_on_client_id"
+  end
+
   add_foreign_key "clients", "coaches"
+  add_foreign_key "diet_plans", "clients"
 end

@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   namespace :api do
     resources :clients
   end
+  namespace :api do
+    resources :diet_plans
+  end
 end
