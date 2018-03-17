@@ -1,24 +1,16 @@
-# README
+# +1UP Backend ![Build Status](https://travis-ci.org/Plus1Up/Plus1UpBackend.svg?branch=master)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version: 2.3.3
 
-Things you may want to cover:
+* Database: PostgreSQL
 
-* Ruby version
+* Deployment: [Heroku](http://plus1up.herokuapp.com/api/coaches/)
 
-* System dependencies
+* Database initialization:
 
-* Configuration
+    Perform following steps
+    - `db:create`
+    - `db:migrate`
+    - `db:seed`
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* How to run the test suite: TBA
