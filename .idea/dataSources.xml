@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="development.sqlite3" uuid="3f6567d0-b5eb-43d2-8866-c46f7604a90d">
-      <driver-ref>sqlite.xerial</driver-ref>
+    <data-source source="LOCAL" name="database_development@localhost" read-only="true" uuid="c8b0274b-6d6f-4259-bce3-08b43f2f460f">
+      <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
-      <driver-properties>
-        <property name="enable_load_extension" value="true" />
-      </driver-properties>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/database_development</jdbc-url>
     </data-source>
   </component>
 </project>

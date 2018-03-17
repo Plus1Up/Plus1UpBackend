@@ -8,9 +8,21 @@
 
 5.times do
   Coach.create({
-                   mailAddress: Faker::Internet.email,
+                   mail_address: Faker::Internet.email,
                    password: Faker::Internet.password(3, 6),
                    name: Faker::Name.first_name,
-                   lastname: Faker::Name.last_name
+                   last_name: Faker::Name.last_name
                })
+end
+
+10.times do
+  Client.create({
+                    coach: Coach.find(Random.rand(1..5)),
+                    mail_address: Faker::Internet.email,
+                    password: Faker::Internet.password(3, 6),
+                    name: Faker::Name.first_name,
+                    last_name: Faker::Name.last_name,
+                    is_pending: Faker::Boolean.boolean,
+                    is_active: Faker::Boolean.boolean
+                })
 end

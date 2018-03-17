@@ -11,12 +11,10 @@ class Api::CoachesController < ApplicationController
 
   def create
     coach = Coach.new(coach_params)
-
     if coach.save
       render json: {status: 'SUCCESS', message: 'Saved coach', data: coach}, status: :ok
     else
       render json: {status: 'ERROR', message: 'Coach not saved', data: coach.errors}, status: :unprocessable_entity
-
     end
   end
 
@@ -28,13 +26,11 @@ class Api::CoachesController < ApplicationController
 
   def update
     coach = Coach.find(params[:id])
-
     if coach.update_attributes(coach_params)
       render json: {status: 'SUCCESS', message: 'Updated coach', data: coach}, status: :ok
     else
       render json: {status: 'ERROR', message: 'Coach not updated', data: coach.errors}, status: :unprocessable_entity
     end
-
   end
 
   private

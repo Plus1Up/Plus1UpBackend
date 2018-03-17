@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   namespace :api do
     resources :coaches
   end
+  namespace :api do
+    resources :clients
+  end
 end

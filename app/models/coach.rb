@@ -1,8 +1,8 @@
 class Coach < ApplicationRecord
-  validates :mailAddress, presence: true
+  validates :mail_address, presence: true
   validates :name, presence: true
   validates :password, presence: true
-  validates :lastname, presence: true
+  validates :last_name, presence: true
 
-  validates :mailAddress, :uniqueness => true
+  validates :mail_address, :uniqueness => true
 end
