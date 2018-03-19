@@ -26,6 +26,8 @@ gem 'puma', '~> 3.7'
 # gem 'rack-cors'
 #
 gem 'faker'
+gem 'simplecov', require: false, group: :test
+gem 'codacy-coverage', require: false, group: :test
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
