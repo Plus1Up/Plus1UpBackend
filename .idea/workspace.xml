@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="150df34f-b63e-46fe-b7e5-a04aedefb38f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/1e6c1b3f-c56d-4452-a817-eae0378f84f2/storage_v2/_src_/database/database_test.1qCusA.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/1e6c1b3f-c56d-4452-a817-eae0378f84f2/storage_v2/_src_/database/database_test.1qCusA/schema/public.abK9xQ.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/61c6d1da-2d43-4559-952a-6a0a556c701b/storage_v2/_src_/database/postgres.edMnLQ.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/61c6d1da-2d43-4559-952a-6a0a556c701b/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/9e67b951-7462-4e21-a070-f1a108b16b06/storage_v2/_src_/database/db_database_test.Bf1fqw.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/9e67b951-7462-4e21-a070-f1a108b16b06/storage_v2/_src_/database/db_database_test.Bf1fqw/schema/public.abK9xQ.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/c8b0274b-6d6f-4259-bce3-08b43f2f460f.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/c8b0274b-6d6f-4259-bce3-08b43f2f460f/storage_v2/_src_/database/database_development.d6wRzw.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/c8b0274b-6d6f-4259-bce3-08b43f2f460f/storage_v2/_src_/database/database_development.d6wRzw/schema/public.abK9xQ.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/f203efe3-7085-4ab4-8546-6424de3d4d45/storage_v2/_src_/database/database_test.1qCusA.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/f203efe3-7085-4ab4-8546-6424de3d4d45/storage_v2/_src_/database/database_test.1qCusA/schema/public.abK9xQ.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/Plus1UPBackend.iml" afterPath="$PROJECT_DIR$/.idea/Plus1UPBackend.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3f6567d0-b5eb-43d2-8866-c46f7604a90d.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/coaches.yml" afterPath="$PROJECT_DIR$/test/fixtures/coaches.yml" />
-      <change beforePath="$PROJECT_DIR$/test/models/client_test.rb" afterPath="$PROJECT_DIR$/test/models/client_test.rb" />
-      <change beforePath="$PROJECT_DIR$/test/models/coach_test.rb" afterPath="$PROJECT_DIR$/test/models/coach_test.rb" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
       <change beforePath="$PROJECT_DIR$/test/test_helper.rb" afterPath="$PROJECT_DIR$/test/test_helper.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -42,7 +22,7 @@
     <SUITE FILE_PATH="coverage/Plus1UPBackend@Development__Plus1UPBackend.coverage" NAME="Development: Plus1UPBackend Coverage Results" MODIFIED="1521306210404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Plus1UPBackend" />
     <SUITE FILE_PATH="coverage/Plus1UPBackend@db_drop__Plus1UPBackend.coverage" NAME="db:drop: Plus1UPBackend Coverage Results" MODIFIED="1521305295444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Plus1UPBackend" />
     <SUITE FILE_PATH="coverage/Plus1UPBackend@Run_test__coach_test___Plus1UPBackend.coverage" NAME="Run test 'coach_test': Plus1UPBackend Coverage Results" MODIFIED="1521498846659" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Plus1UPBackend" />
-    <SUITE FILE_PATH="coverage/Plus1UPBackend@All_tests_in_test__Plus1UPBackend.coverage" NAME="All tests in test: Plus1UPBackend Coverage Results" MODIFIED="1521500031647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Plus1UPBackend" />
+    <SUITE FILE_PATH="coverage/Plus1UPBackend@All_tests_in_test__Plus1UPBackend.coverage" NAME="All tests in test: Plus1UPBackend Coverage Results" MODIFIED="1521500292140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Plus1UPBackend" />
     <SUITE FILE_PATH="coverage/Plus1UPBackend@test_should_not_save_coach_without_all_values__Plus1UPBackend.coverage" NAME="test_should_not_save_coach_without_all_values: Plus1UPBackend Coverage Results" MODIFIED="1521497323076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Plus1UPBackend" />
     <SUITE FILE_PATH="coverage/Plus1UPBackend@db_seed__Plus1UPBackend.coverage" NAME="db:seed: Plus1UPBackend Coverage Results" MODIFIED="1520356394541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Plus1UPBackend" />
     <SUITE FILE_PATH="coverage/Plus1UPBackend@Run_test__ClientTest___Plus1UPBackend.coverage" NAME="Run test 'ClientTest': Plus1UPBackend Coverage Results" MODIFIED="1521495306662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Plus1UPBackend" />
@@ -124,21 +104,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spec_helper.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
+      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+            <state relative-caret-position="120">
+              <caret line="8" column="64" lean-forward="false" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_helper.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="spec_helper.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_helper.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -202,6 +192,7 @@
       <find>databse</find>
       <find>lastname</find>
       <find>spec</find>
+      <find>CODACY_PROJECT_TOKEN</find>
     </findStrings>
   </component>
   <component name="GeneratorOptions">
@@ -248,6 +239,7 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
         <option value="$PROJECT_DIR$/test/test_helper.rb" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -987,7 +979,7 @@
       <workItem from="1520093322558" duration="779000" />
       <workItem from="1520351128419" duration="14172000" />
       <workItem from="1521302918884" duration="8637000" />
-      <workItem from="1521495051060" duration="4807000" />
+      <workItem from="1521495051060" duration="5956000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1520093372817</created>
@@ -1030,14 +1022,14 @@
     <history-entry file="All_tests_in_test__Plus1UPBackend - 2018.03.19 at 23h 53m 56s.xml">
       <configuration name="All tests in test: Plus1UPBackend" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
+    <history-entry file="All_tests_in_test__Plus1UPBackend - 2018.03.19 at 23h 56m 36s.xml">
+      <configuration name="All tests in test: Plus1UPBackend" configurationId="TestUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_tests_in_test__Plus1UPBackend - 2018.03.19 at 23h 58m 17s.xml">
+      <configuration name="All tests in test: Plus1UPBackend" configurationId="TestUnitRunConfigurationType" />
+    </history-entry>
     <history-entry file="Run_test_'coach_test'__Plus1UPBackend - 2018.03.19 at 23h 34m 11s.xml">
       <configuration name="Run test 'coach_test': Plus1UPBackend" configurationId="TestUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="test_mail_address_should_be_unique__Plus1UPBackend - 2018.03.19 at 23h 11m 56s.xml">
-      <configuration name="test_mail_address_should_be_unique: Plus1UPBackend" configurationId="TestUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="test_mail_address_should_be_unique__Plus1UPBackend - 2018.03.19 at 23h 13m 16s.xml">
-      <configuration name="test_mail_address_should_be_unique: Plus1UPBackend" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
     <history-entry file="test_mail_address_should_be_unique__Plus1UPBackend - 2018.03.19 at 23h 15m 43s.xml">
       <configuration name="test_mail_address_should_be_unique: Plus1UPBackend" configurationId="TestUnitRunConfigurationType" />
@@ -1053,7 +1045,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29196000" />
+    <option name="totallyTimeSpent" value="30345000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1167" height="777" extended-state="0" />
@@ -1132,6 +1124,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1139,6 +1132,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1360,14 +1354,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/fixtures/clients.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1499,18 +1485,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
+    <entry file="file://$PROJECT_DIR$/test/test_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_helper.rb">
+    <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="256">
+          <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="64" lean-forward="false" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
           <folding />
         </state>
       </provider>

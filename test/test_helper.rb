@@ -1,8 +1,8 @@
-require 'codacy-coverage'
-Codacy::Reporter.start
-
 require 'simplecov'
 SimpleCov.start 'rails'
+
+require 'codacy-coverage'
+Codacy::Reporter.start
 
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
