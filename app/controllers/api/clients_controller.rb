@@ -49,14 +49,15 @@ class Api::ClientsController < ApplicationController
 }'
 
   def_param_group :id do
-    param :id, Integer, "Unique client id", :required => true
+    param :id, String, "Unique client id", :required => true
   end
 
   def_param_group :client_params do
     param :mail_address, String, "Unique email address", :required => true, :action_aware => true
     param :password, String, "Plaintext password", :required => true, :action_aware => true
     param :name, String, "First name of client", :required => true, :action_aware => true
-    param :lat_name, String, "Last name of client", :required => true, :action_aware => true
+    param :last_name, String, "Last name of client", :required => true, :action_aware => true
+    param :coach_id, String, "Id of coach", :required => true, :action_aware => true
   end
 
   api :GET, '/clients', 'Show all clients details'
@@ -116,6 +117,6 @@ class Api::ClientsController < ApplicationController
   private
 
   def client_params
-    params.permit(:mail_address, :password, :name, :last_name)
+    params.permit(:mail_address, :password, :name, :last_name, :coach_id)
   end
 end
