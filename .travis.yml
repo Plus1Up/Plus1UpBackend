@@ -11,4 +11,3 @@ before_script:
 
 after_script:
   - rails test
-  - bundle exec rspec
