@@ -4,5 +4,7 @@ class Client < ApplicationRecord
   validates :name, presence: true
   validates :last_name, presence: true
 
+  validates :mail_address, uniqueness: true
+
   belongs_to :coach
 end

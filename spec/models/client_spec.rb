@@ -55,5 +55,7 @@ RSpec.describe Client, type: :model do
     expect(subject.is_active).to eq nil
   end
 
+  # Uniqueness test
+  it {should validate_uniqueness_of(:mail_address)}
 
 end
