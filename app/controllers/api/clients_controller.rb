@@ -76,8 +76,8 @@ class Api::ClientsController < ApplicationController
     is_active = params['is_active']
     print(params['is_active'])
     clients = Client.order('updated_at DESC')
-    clients = clients.where(is_active: is_active) if params['is_active'] != nil
-    clients = clients.where(is_pending: params['is_pending']) if params['is_pending'] != nil
+    clients = clients.where(is_active: is_active) if params['is_active']
+    clients = clients.where(is_pending: params['is_pending']) if params['is_pending']
 
     render json: {status: 'SUCCESS', message: 'Loaded clients', data: clients}, status: :ok
   end
