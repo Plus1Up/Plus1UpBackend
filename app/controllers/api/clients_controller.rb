@@ -1,6 +1,12 @@
 class Api::ClientsController < ApplicationController
 
-  SAMPLE_GET_CLIENTS_RESPONSE = '{
+  SAMPLE_GET_CLIENTS_RESPONSE = '
+  REQUEST URL:
+  GET "/api/clients?is_active=true&is_pending=true"
+
+  RESPONSE:
+
+{
   "status": "SUCCESS",
   "message": "Loaded clients",
   "data": [
@@ -11,8 +17,8 @@ class Api::ClientsController < ApplicationController
       "password": "MgQ8X8",
       "name": "Alivia",
       "last_name": "Lowe",
-      "is_pending": false,
-      "is_active": false,
+      "is_pending": true,
+      "is_active": true,
       "created_at": "2018-03-17T19:16:24.727Z",
       "updated_at": "2018-03-17T19:16:24.727Z"
     },
@@ -61,13 +67,18 @@ class Api::ClientsController < ApplicationController
   end
 
   api :GET, '/clients', 'Show all clients details'
-  error :code => 404, :desc => 'Not Found'
   description 'Return list of all clients in system'
-
+  param :is_active, %w(true false), :desc => 'Get only active users'
+  param :is_pending, %w(true false), :desc => 'Get only pending users'
   example SAMPLE_GET_CLIENTS_RESPONSE
 
   def index
-    clients = Client.order('created_at DESC')
+    is_active = params['is_active']
+    print(params['is_active'])
+    clients = Client.order('updated_at DESC')
+    clients = clients.where(is_active: is_active) if params['is_active'] != nil
+    clients = clients.where(is_pending: params['is_pending']) if params['is_pending'] != nil
+
     render json: {status: 'SUCCESS', message: 'Loaded clients', data: clients}, status: :ok
   end
 
