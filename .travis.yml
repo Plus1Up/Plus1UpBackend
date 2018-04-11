@@ -8,6 +8,7 @@ services:
 before_script:
   - export CODACY_PROJECT_TOKEN=6c9ad7759c7d4b54addbe6fcda0c83f2
   - psql -c 'create database database_test;' -U postgres
+  - bundle exec rake db:reset RAILS_ENV=test
 
 after_script:
   - rails test

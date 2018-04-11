@@ -1,7 +1,6 @@
 require "rails_helper"
 
 RSpec.describe Client, type: :model do
-
   subject {
     described_class.new(
         coach: Coach.new,
@@ -57,5 +56,4 @@ RSpec.describe Client, type: :model do
 
   # Uniqueness test
   it {should validate_uniqueness_of(:mail_address)}
-
 end

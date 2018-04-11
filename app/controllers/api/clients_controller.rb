@@ -55,26 +55,30 @@ class Api::ClientsController < ApplicationController
 }'
 
   def_param_group :id do
-    param :id, String, "Unique client id", :required => true
+    param :id, Integer, "Unique client id", :required => true
   end
 
   def_param_group :client_params do
-    param :mail_address, String, "Unique email address", :required => true, :action_aware => true
-    param :password, String, "Plaintext password", :required => true, :action_aware => true
-    param :name, String, "First name of client", :required => true, :action_aware => true
-    param :last_name, String, "Last name of client", :required => true, :action_aware => true
-    param :coach_id, String, "Id of coach", :required => true, :action_aware => true
+    param :mail_address, String, 'Unique email address', :required => true
+    param :password, String, 'Plaintext password', :required => true
+    param :name, String, 'First name of client', :required => true
+    param :last_name, String, 'Last name of client', :required => true
+    param :coach_id, String, 'Id of coach', :required => true
+  end
+
+  def_param_group :update_params do
+    param :is_active, :boolean, 'Indicates if user is in active state', :required => false
+    param :is_pending, :boolean, 'Indicates if user is in active state', :required => false
   end
 
   api :GET, '/clients', 'Show all clients details'
   description 'Return list of all clients in system'
-  param :is_active, %w(true false), :desc => 'Get only active users'
-  param :is_pending, %w(true false), :desc => 'Get only pending users'
+  param :is_active, :boolean, :desc => 'Get only active users'
+  param :is_pending, :boolean, :desc => 'Get only pending users'
   example SAMPLE_GET_CLIENTS_RESPONSE
 
   def index
     is_active = params['is_active']
-    print(params['is_active'])
     clients = Client.order('updated_at DESC')
     clients = clients.where(is_active: is_active) if params['is_active']
     clients = clients.where(is_pending: params['is_pending']) if params['is_pending']
@@ -87,8 +91,12 @@ class Api::ClientsController < ApplicationController
   example SAMPLE_GET_CLIENT_RESPONSE
 
   def show
-    client = Client.find(params[:id])
-    render json: {status: 'SUCCESS', message: 'Client loaded', data: client}, status: :ok
+    client = Client.find_by_id(params[:id])
+    if client != nil
+      render json: {status: 'SUCCESS', message: 'Client loaded', data: client}, status: :ok
+    else
+      render json: {status: 'FAILURE', message: 'Couldn\'t find client', data: client}, status: :not_found
+    end
   end
 
   api :POST, '/clients', 'Create new client'
@@ -97,7 +105,7 @@ class Api::ClientsController < ApplicationController
   def create
     client = Client.new(client_params)
     if client.save
-      render json: {status: 'SUCCESS', message: 'Saved client', data: client}, status: :ok
+      render json: {status: 'SUCCESS', message: 'Saved client', data: client}, status: :created
     else
       render json: {status: 'ERROR', message: 'Client not saved', data: client.errors}, status: :unprocessable_entity
     end
@@ -112,22 +120,23 @@ class Api::ClientsController < ApplicationController
     render json: {status: 'SUCCESS', message: 'Deleted client', data: client}, status: :ok
   end
 
-  api :PUT, '/clients/:id', 'Update client'
+  api :PUT, '/clients/:id', 'Update client status'
   param_group :id
-  param_group :client_params, :as => :update
+  param_group :update_params
 
   def update
-    client = Client.find(params[:id])
-    if client.update_attributes(coach_params)
-      render json: {status: 'SUCCESS', message: 'Updated client', data: client}, status: :ok
+    client = Client.find_by_id(params[:id])
+
+    if client != nil && client.update_attributes(client_params)
+      render json: {status: 'SUCCESS', message: 'Updated client', data: client}, status: :no_content
     else
-      render json: {status: 'ERROR', message: 'Client not updated', data: client.errors}, status: :unprocessable_entity
+      render json: {status: 'ERROR', message: 'Client not updated', data: client&.errors}, status: :not_found
     end
   end
 
   private
 
   def client_params
-    params.permit(:mail_address, :password, :name, :last_name, :coach_id)
+    params.permit(:mail_address, :password, :name, :last_name, :coach_id, :is_active, :is_pending)
   end
 end
