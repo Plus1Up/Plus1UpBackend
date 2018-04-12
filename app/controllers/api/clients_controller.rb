@@ -111,15 +111,6 @@ class Api::ClientsController < ApplicationController
     end
   end
 
-  api :DELETE, '/clients/:id', 'Remove client'
-  param_group :id
-
-  def destroy
-    client = Client.find(params[:id])
-    client.destroy
-    render json: {status: 'SUCCESS', message: 'Remove client with all his diet plans', data: client}, status: :ok
-  end
-
   api :PUT, '/clients/:id', 'Update client status'
   param_group :id
   param_group :update_params
@@ -133,6 +124,16 @@ class Api::ClientsController < ApplicationController
       render json: {status: 'ERROR', message: 'Client not updated', data: client&.errors}, status: :not_found
     end
   end
+
+  api :DELETE, '/clients/:id', 'Remove client'
+  param_group :id
+
+  def destroy
+    client = Client.find(params[:id])
+    client.destroy
+    render json: {status: 'SUCCESS', message: 'Remove client with all his diet plans', data: client}, status: :ok
+  end
+
 
   private
 

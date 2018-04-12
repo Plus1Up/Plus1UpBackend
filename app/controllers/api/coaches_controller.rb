@@ -33,13 +33,27 @@ class Api::CoachesController < ApplicationController
   def create
     coach = Coach.new(coach_params)
     if coach.save
-      render json: {status: 'SUCCESS', message: 'Saved coach', data: coach}, status: :ok
+      render json: {status: 'SUCCESS', message: 'Saved coach', data: coach}, status: :created
     else
       render json: {status: 'ERROR', message: 'Coach not saved', data: coach.errors}, status: :unprocessable_entity
     end
   end
 
-  api :DELETE, '/clients/:id', 'Remove coach with all his clients'
+  api :PUT, '/coaches', 'Update coach data'
+  param_group :id
+  param_group :coach_params, :as => :update
+
+  def update
+    coach = Coach.find_by_id(params[:id])
+    if coach != nil && coach.update_attributes(coach_params)
+      render json: {status: 'SUCCESS', message: 'Updated coach', data: coach}, status: :no_content
+    else
+      render json: {status: 'ERROR', message: 'Coach not updated', data: coach&.errors}, status: :not_found
+    end
+  end
+
+
+  api :DELETE, '/coaches/:id', 'Remove coach with all his clients'
   param_group :id
 
   def destroy
@@ -48,22 +62,10 @@ class Api::CoachesController < ApplicationController
     render json: {status: 'SUCCESS', message: 'Deleted coach', data: coach}, status: :ok
   end
 
-  api :PUT, '/coaches', 'Update coach data'
-  param_group :id
-  param_group :coach_params, :as => :update
-
-  def update
-    coach = Coach.find(params[:id])
-    if coach.update_attributes(coach_params)
-      render json: {status: 'SUCCESS', message: 'Updated coach', data: coach}, status: :ok
-    else
-      render json: {status: 'ERROR', message: 'Coach not updated', data: coach.errors}, status: :unprocessable_entity
-    end
-  end
 
   private
 
   def coach_params
-    params.permit(:mailAddress, :password, :name, :last_name)
+    params.permit(:mail_address, :password, :name, :last_name)
   end
 end
