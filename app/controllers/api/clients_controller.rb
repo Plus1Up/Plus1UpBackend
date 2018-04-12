@@ -55,7 +55,7 @@ class Api::ClientsController < ApplicationController
 }'
 
   def_param_group :id do
-    param :id, Integer, "Unique client id", :required => true
+    param :id, Integer, 'Unique client id', :required => true
   end
 
   def_param_group :client_params do
@@ -71,7 +71,7 @@ class Api::ClientsController < ApplicationController
     param :is_pending, :boolean, 'Indicates if user is in active state', :required => false
   end
 
-  api :GET, '/clients', 'Show all clients details'
+  api :GET, '/clients', 'Show all clients'
   description 'Return list of all clients in system'
   param :is_active, :boolean, :desc => 'Get only active users'
   param :is_pending, :boolean, :desc => 'Get only pending users'
@@ -117,7 +117,7 @@ class Api::ClientsController < ApplicationController
   def destroy
     client = Client.find(params[:id])
     client.destroy
-    render json: {status: 'SUCCESS', message: 'Deleted client', data: client}, status: :ok
+    render json: {status: 'SUCCESS', message: 'Remove client with all his diet plans', data: client}, status: :ok
   end
 
   api :PUT, '/clients/:id', 'Update client status'
