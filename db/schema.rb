@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180411160025) do
+ActiveRecord::Schema.define(version: 20180412153658) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,10 +29,10 @@ ActiveRecord::Schema.define(version: 20180411160025) do
   end
 
   create_table "coaches", force: :cascade do |t|
-    t.string "mail_address"
-    t.string "password"
-    t.string "name"
-    t.string "last_name"
+    t.string "mail_address", null: false
+    t.string "password", null: false
+    t.string "name", null: false
+    t.string "last_name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["mail_address"], name: "index_coaches_on_mail_address", unique: true
@@ -47,6 +47,6 @@ ActiveRecord::Schema.define(version: 20180411160025) do
     t.index ["client_id"], name: "index_diet_plans_on_client_id"
   end
 
-  add_foreign_key "clients", "coaches"
+  add_foreign_key "clients", "coaches", on_delete: :cascade
   add_foreign_key "diet_plans", "clients", on_delete: :cascade
 end
