@@ -23,3 +23,5 @@ coverage
 .idea
 
 .DS_Store
+
+/public
