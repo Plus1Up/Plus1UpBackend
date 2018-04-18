@@ -56,4 +56,10 @@ RSpec.describe Client, type: :model do
 
   # Uniqueness test
   it {should validate_uniqueness_of(:mail_address)}
+
+  # Diet plan validations
+  it {should have_attached_file(:diet_plan)}
+
+  it {should validate_attachment_content_type(:diet_plan).allowing('application/pdf')}
+
 end
