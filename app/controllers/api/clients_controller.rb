@@ -1,59 +1,5 @@
 class Api::ClientsController < ApplicationController
 
-  SAMPLE_GET_CLIENTS_RESPONSE = '
-  REQUEST URL:
-  GET "/api/clients?is_active=true&is_pending=true"
-
-  RESPONSE:
-
-{
-  "status": "SUCCESS",
-  "message": "Loaded clients",
-  "data": [
-    {
-      "id": 20,
-      "coach_id": 4,
-      "mail_address": "maymie_mosciski@stehrjohnson.io",
-      "password": "MgQ8X8",
-      "name": "Alivia",
-      "last_name": "Lowe",
-      "is_pending": true,
-      "is_active": true,
-      "created_at": "2018-03-17T19:16:24.727Z",
-      "updated_at": "2018-03-17T19:16:24.727Z"
-    },
-    {
-      "id": 19,
-      "coach_id": 1,
-      "mail_address": "vita_bernier@bergnaum.co",
-      "password": "0aC37",
-      "name": "Ashleigh",
-      "last_name": "Cummings",
-      "is_pending": true,
-      "is_active": true,
-      "created_at": "2018-03-17T19:16:24.722Z",
-      "updated_at": "2018-03-17T19:16:24.722Z"
-    }
-  ]
-}'
-
-  SAMPLE_GET_CLIENT_RESPONSE = '{
-  "status": "SUCCESS",
-  "message": "Client loaded",
-  "data": {
-    "id": 19,
-    "coach_id": 1,
-    "mail_address": "vita_bernier@bergnaum.co",
-    "password": "0aC37",
-    "name": "Ashleigh",
-    "last_name": "Cummings",
-    "is_pending": true,
-    "is_active": true,
-    "created_at": "2018-03-17T19:16:24.722Z",
-    "updated_at": "2018-03-17T19:16:24.722Z"
-  }
-}'
-
   def_param_group :id do
     param :id, Integer, 'Unique client id', :required => true
   end
@@ -69,13 +15,13 @@ class Api::ClientsController < ApplicationController
   def_param_group :update_params do
     param :is_active, :boolean, 'Indicates if user is in active state', :required => false
     param :is_pending, :boolean, 'Indicates if user is in active state', :required => false
+    param :diet_plan, File, 'Diet plan for user in PDF format. Scheme, where diet plan is stored: /system/clients/:id/diet_plan/:diet_plan_file_name', :required => false
   end
 
   api :GET, '/clients', 'Show all clients'
   description 'Return list of all clients in system'
   param :is_active, :boolean, :desc => 'Get only active users'
   param :is_pending, :boolean, :desc => 'Get only pending users'
-  example SAMPLE_GET_CLIENTS_RESPONSE
 
   def index
     is_active = params['is_active']
@@ -88,7 +34,6 @@ class Api::ClientsController < ApplicationController
 
   api :GET, '/clients/:id', 'Get a single client details'
   param_group :id
-  example SAMPLE_GET_CLIENT_RESPONSE
 
   def show
     client = Client.find_by_id(params[:id])
@@ -111,13 +56,12 @@ class Api::ClientsController < ApplicationController
     end
   end
 
-  api :PUT, '/clients/:id', 'Update client status'
+  api :PUT, '/clients/:id', 'Update client parameters'
   param_group :id
   param_group :update_params
 
   def update
     client = Client.find_by_id(params[:id])
-
     if client != nil && client.update_attributes(client_params)
       render json: {status: 'SUCCESS', message: 'Updated client', data: client}, status: :no_content
     else
@@ -138,6 +82,6 @@ class Api::ClientsController < ApplicationController
   private
 
   def client_params
-    params.permit(:mail_address, :password, :name, :last_name, :coach_id, :is_active, :is_pending)
+    params.permit(:mail_address, :password, :name, :last_name, :coach_id, :is_active, :is_pending, :diet_plan)
   end
 end

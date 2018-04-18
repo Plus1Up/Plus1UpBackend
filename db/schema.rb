@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180412181442) do
+ActiveRecord::Schema.define(version: 20180413152357) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,10 @@ ActiveRecord::Schema.define(version: 20180412181442) do
     t.boolean "is_active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "diet_plan_file_name"
+    t.string "diet_plan_content_type"
+    t.integer "diet_plan_file_size"
+    t.datetime "diet_plan_updated_at"
     t.index ["coach_id"], name: "index_clients_on_coach_id"
   end
 

@@ -139,9 +139,24 @@ RSpec.describe 'Clients API', type: :request do
     end
   end
 
+  # Test suite for uploading file into /clients/:id
+  describe 'PUT /api/clients/:id' do
+    let(:file) {fixture_file_upload('/files/pdf-sample.pdf')}
+
+    it 'upload diet plan for client' do
+      put "/api/clients/#{client_id}", params: {diet_plan: file}
+      expect(response).to have_http_status(204)
+
+      updated_client = Client.find(client_id)
+      expect(updated_client.diet_plan_file_name).to eq('pdf-sample.pdf')
+      expect(updated_client.diet_plan_content_type).to eq('application/pdf')
+      expect(updated_client.diet_plan_file_size).to eq(7945)
+    end
+  end
+
 
   # Test suite for DELETE /clients/:id
-  describe 'DELETE /api/client/:id' do
+  describe 'DELETE /api/clients/:id' do
     before {
       delete "/api/clients/#{client_id}"
     }
