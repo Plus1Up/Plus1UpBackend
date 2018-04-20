@@ -12,4 +12,5 @@ class Client < ApplicationRecord
   validates_attachment_content_type :diet_plan, :content_type => %w(image/jpeg image/png application/pdf)
 
   belongs_to :coach
+  has_many :trainings
 end

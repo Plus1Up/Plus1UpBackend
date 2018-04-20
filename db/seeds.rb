@@ -53,3 +53,11 @@ end
                     is_active: nil
                 })
 end
+
+(1..30).each {|i|
+  Training.create({
+                      client: Client.find(i),
+                      name: Faker::StarWars.character,
+                      weekday: Random.rand(6)
+                  })
+}
