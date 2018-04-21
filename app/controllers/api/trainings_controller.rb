@@ -5,7 +5,7 @@ class Api::TrainingsController < ApplicationController
 
   # GET /trainings
   def index
-    if @client != nil
+    if @client
       render json: {status: 'SUCCESS', message: 'Loaded trainings', data: @client.trainings}, status: :ok
     else
       render json: {status: 'FAILURE', message: 'Couldn\'t find client', data: nil}, status: :not_found
