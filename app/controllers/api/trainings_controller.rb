@@ -12,28 +12,31 @@ class Api::TrainingsController < ApplicationController
     end
   end
 
-  # GET /trainings/1
+  # GET /trainings/:id
   def show
-    render json: @training
+    if @training
+      render json: {status: 'SUCCESS', message: 'Loaded training', data: @training}, status: :ok
+    else
+      render json: {status: 'FAILURE', message: 'Couldn\'t find training', data: nil}, status: :not_found
+    end
   end
 
   # POST /trainings
   def create
     @training = Training.new(training_params)
-
     if @training.save
-      render json: @training, status: :created, location: @training
+      render json: {status: 'SUCCESS', message: 'Training added', data: @training}, status: :created
     else
-      render json: @training.errors, status: :unprocessable_entity
+      render json: {status: 'FAILURE', message: 'Couldn\'t add training', data: @training.errors}, status: :unprocessable_entity
     end
   end
 
-  # PATCH/PUT /trainings/1
+  # PUT /trainings/1
   def update
-    if @training.update(training_params)
-      render json: @training
+    if @training and @training.update(training_params)
+      render json: {status: 'SUCCESS', message: 'Updated client', data: @training}, status: :no_content
     else
-      render json: @training.errors, status: :unprocessable_entity
+      render json: {status: 'FAILURE', message: 'Couldn\'t update training', data: @training&.errors}, status: :unprocessable_entity
     end
   end
 
@@ -49,7 +52,11 @@ class Api::TrainingsController < ApplicationController
   end
 
   def set_client_training
-    @training = @client.trainings.find_by!(id: params[:id])
+    @training = @client.trainings.find_by_id(params[:id])
+  end
+
+  def training_params
+    params.permit(:client_id, :name, :weekday)
   end
 
 end
