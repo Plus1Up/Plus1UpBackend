@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Exercise, type: :model do
   subject {
     described_class.new(
-        name: Faker::Food.dish,
+        name: "Exercise test name",
         category: "triceps"
     )
   }

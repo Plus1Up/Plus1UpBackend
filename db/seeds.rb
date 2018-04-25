@@ -61,3 +61,10 @@ end
                       weekday: Random.rand(6)
                   })
 }
+
+5.times do
+  Exercise.create({
+                      name: Faker::Food.dish,
+                      category: :triceps
+                  })
+end
