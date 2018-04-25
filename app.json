@@ -1,6 +1,7 @@
 {
   "name": "Plus1UpBackend",
   "scripts": {
+    "postdeploy":"bundle exec rake db:schema:load db:seed"
   },
   "env": {
     "LANG": {

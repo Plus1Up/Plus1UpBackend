@@ -5,9 +5,8 @@ Rails.application.routes.draw do
     resources :coaches
   end
   namespace :api do
-    resources :clients
-  end
-  namespace :api do
-    resources :diet_plans
+    resources :clients do
+      resources :trainings
+    end
   end
 end

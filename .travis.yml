@@ -1,15 +1,14 @@
 language: ruby
-
-bundler_args: --without production
-
+bundler_args: "--without production"
 services:
-  - postgresql
-
+- postgresql
 before_script:
-  - export CODACY_PROJECT_TOKEN=6c9ad7759c7d4b54addbe6fcda0c83f2
-  - psql -c 'create database database_test;' -U postgres
-  - bundle exec rake db:reset RAILS_ENV=test
-
+- export CODACY_PROJECT_TOKEN=6c9ad7759c7d4b54addbe6fcda0c83f2
+- psql -c 'create database database_test;' -U postgres
+- bundle exec rake db:reset RAILS_ENV=test
 after_script:
-  - rails test
-  - bundle exec rspec
+- rails test
+- bundle exec rspec
+notifications:
+  slack:
+    secure: ObivXvgl5IzhO7UE3vsLdaInByG9Cr4V6tEW0naI+mTeszZ0FKWfWNENKQrRbUCY/JugRGfkw7eVNZmMNeYGrl9yM4um2++ktpzIKUnMy4bUPEwZGqSewpD5Vfe+sZjyaVH/GQ2ko0d2tScb1gRa9dajrwENBNMQNjx8Wl2R8n1HsYI55eYK0C3iMCQ2XPylq4N2cwvdXbgqalQi99pXWu+8TQPYpooI7gDReYbHnPKhIdqn1MVov1LD/vtlLAoWzxHvJYhG4LyFi0mTeTud2bMPhmyYuehkbpVX9WzbKyrd9xCc1N83Xs335pADijrRLcKlLb3NOcB5o1pMgDcX1bS+9qX9q/tMYBhTqRcMZyMggln3wVdaPeOzKwbJPmFyJQs/0+sQNWd6j+SXx5pEZvV3+gG2oR3t9LjOmLWWe6kKTPmiQOc2l02fbPPgUZGi12GWC2SfaKXm3vBoaWe+lIa8WPMEJcC1oC9fZYzfiYFU96XyjgfAmZBHOL9StlRirzCaxsowuFVaZcYHPStePsPi3g6BBYIB33sik3iw1Rgp5m6cPJVYPqwKd692qwLVG4WCdzbXDO099VvhiY/HYThFhWYtegL5sNC5UrKdVsaWBxx0bMnKZ9KhBC216RmDVqwSnFu5XBnW+kF2fGwQoYf04zlivfRB1J7oX1bhTnU=
