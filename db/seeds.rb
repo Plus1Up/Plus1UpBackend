@@ -64,6 +64,7 @@ end
 
 5.times do
   Exercise.create({
+                      coach: Coach.find(Random.rand(1..5)),
                       name: Faker::Food.dish,
                       category: :triceps
                   })

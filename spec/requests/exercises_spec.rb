@@ -52,7 +52,7 @@ RSpec.describe 'Exercises API', type: :request do
   # Test suite for POST /exercises
   describe 'POST /api/exercises/' do
     let(:valid_attributes) {
-      {name: 'New exercise test', category: :abs}
+      {coach_id: Coach.first['id'], name: 'New exercise test', category: :abs}
     }
 
     context 'when request attributes are valid' do
@@ -75,7 +75,7 @@ RSpec.describe 'Exercises API', type: :request do
   # Test suite for PUT /exercises/:id
   describe 'PUT /exercises/:id' do
     let(:valid_attributes) {
-      {name: 'Updated name', category: :biceps}
+      {name: 'Updated name', category: "biceps"}
     }
 
     before {

@@ -5,4 +5,6 @@ class Coach < ApplicationRecord
   validates :last_name, presence: true
 
   validates :mail_address, :uniqueness => true
+
+  has_many :exercises
 end

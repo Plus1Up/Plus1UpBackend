@@ -3,4 +3,6 @@ class Exercise < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
   validates :category, presence: true
+
+  belongs_to :coach
 end
